@@ -19,3 +19,7 @@ if __name__ == '__main__':
     print(luciano.age)
     for child in luciano.children:
         print(child.name)
+    luciano.last_name = 'Souza'
+    del luciano.children
+    print(luciano.__dict__)
+    print(felipe.__dict__)
