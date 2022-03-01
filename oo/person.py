@@ -1,4 +1,6 @@
 class Person:
+    eyes = 2
+
     def __init__(self, *children, name=None, age=20):
         #Atributo = parâmetro
         self.name = name
@@ -21,5 +23,12 @@ if __name__ == '__main__':
         print(child.name)
     luciano.last_name = 'Souza'
     del luciano.children
+    luciano.eyes = 1
+    del luciano.eyes
     print(luciano.__dict__)
     print(felipe.__dict__)
+    Person.eyes = 3
+    print(Person.eyes)
+    print(felipe.eyes)
+    print(luciano.eyes)
+    print(id(Person.eyes), id(felipe.eyes), id(luciano.eyes))
